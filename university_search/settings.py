@@ -35,7 +35,7 @@ DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
 
 # Optionally, set ALLOWED_HOSTS for Heroku
-ALLOWED_HOSTS = ['https://uni-prof-app-72b3d606a9aa.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['uni-prof-app-72b3d606a9aa.herokuapp.com', 'localhost']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-#uwc+un#-8ysb_(-n(zn4ek-1u3()ufcb=)!gj2mf!a7v=(gkg'
