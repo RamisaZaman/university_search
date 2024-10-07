@@ -26,13 +26,20 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
+
+# Secret key from environment (Production)
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'z24ej6(5f%)8j%at2c)!!glygy_4rwbjuf*johs$o#r-d%a^2e')
+
+# Debug setting from environment
+DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+
+
+# Optionally, set ALLOWED_HOSTS for Heroku
+ALLOWED_HOSTS = ['uni-prof-app.herokuapp.com', 'localhost']
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#uwc+un#-8ysb_(-n(zn4ek-1u3()ufcb=)!gj2mf!a7v=(gkg'
+#SECRET_KEY = 'django-insecure-#uwc+un#-8ysb_(-n(zn4ek-1u3()ufcb=)!gj2mf!a7v=(gkg'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['UniversityApp.herokuapp.com', 'localhost']
 
 
 # Application definition
