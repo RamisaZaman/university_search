@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Search for Professors{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Find Professors and Universities</h1>
+
+    <form method="GET" action="{% url 'search_professors' %}">
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" id="country" name="country" placeholder="Enter country">
+        </div>
+
+        <div class="mb-3">
+            <label for="research_area" class="form-label">Research Area</label>
+            <input type="text" class="form-control" id="research_area" name="research_area" placeholder="Enter research area">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+{% endblock %}
